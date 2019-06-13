@@ -1,0 +1,46 @@
+<!-- Header -->
+<header id="header" data-transparent="false" data-responsive-fixed="true" class="">
+
+    <div class="header-inner">
+        <div class="container">
+            <!--Logo-->
+            <div id="logo">
+                <a href="/" class="logo" data-src-dark="images/logo-dark.png">
+                    {% if settings.site_settings.ContactSettings.logo %}
+                        <img src="{{ settings.site_settings.ContactSettings.logo }}" alt="{{ site_name }}">
+
+                    {% else %}
+                        {{ settings.site_settings.ContactSettings.name }}
+                    {% endif %}
+                </a>
+            </div>
+            <!--End: Logo-->
+
+
+            <!--Navigation Resposnive Trigger-->
+            <div id="mainMenu-trigger">
+                <button class="lines-button x"><span class="lines"></span></button>
+            </div>
+            <!--end: Navigation Resposnive Trigger-->
+
+            <!--Navigation-->
+            <div id="mainMenu" class="menu-one-page">
+                <div class="container">
+                    <nav>
+                        <ul>
+                            <li><a href="#slider">Главная</a></li>
+                            {#                                <li><a href="#section2">About Us</a></li>#}
+                            {#                                <li><a href="#section3">Pricing Plans</a></li>#}
+                            {#                                <li><a href="#section4">Blog</a></li>#}
+                            {#                                <li><a href="#section5">Testimonials</a></li>#}
+                            <li><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--end: Navigation-->
+
+        </div>
+    </div>
+</header>
+<!-- end: Header -->

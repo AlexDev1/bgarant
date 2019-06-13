@@ -1,40 +1,71 @@
-{% load static wagtailuserbar %}
+{% load static wagtailuserbar wagtailimages_tags %}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% with self.get_site.site_name as site_name %}
-                    {% if site_name %}- {{ site_name }}{% endif %}
-                {% endwith %}
-            {% endblock %}
-        </title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/bgarant.css' %}">
-
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
         {% endblock %}
-    </head>
-
-    <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
-
-        {% block content %}{% endblock %}
-
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/bgarant.js' %}"></script>
-
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
+        {% block title_suffix %}
+            {% with self.get_site.site_name as site_name %}
+                {% if site_name %}- {{ site_name }}{% endif %}
+            {% endwith %}
         {% endblock %}
-    </body>
+    </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    {# Global stylesheets #}
+    <link href="{% static "css/plugins.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/responsive.css" %}" rel="stylesheet">
+    <link href="{% static "css/lawyer-style.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bgarant.css' %}">
+
+    {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+{% wagtailuserbar %}
+<div class="body-inner">
+    {% include '_header.html' %}
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="widget">
+
+                            <div class="widget-title">{{ settings.site_settings.ContactSettings.name }}</div>
+                            <p class="mb-5">Copyright © {% now 'Y' %}г.</p>
+{#                            <a href="#" class="btn btn-inverted"></a>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">&copy; {% now 'Y' %} - {{ settings.site_settings.ContactSettings.name }}</div>
+            </div>
+        </div>
+    </footer>
+    <!-- end: Footer -->
+
+</div>
+<a id="scrollTop"><i class="icon-chevron-up1"></i><i class="icon-chevron-up1"></i></a>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/functions.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bgarant.js' %}"></script>
+
+{% block extra_js %}{% endblock %}
+</body>
 </html>
