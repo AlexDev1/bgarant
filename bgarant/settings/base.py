@@ -27,10 +27,14 @@ INSTALLED_APPS = [
     'home',
     'search',
     'site_settings',
+    'contact',
 
     'wagtail.contrib.forms',
-    'wagtail.contrib.settings',
+    'wagtail.contrib.modeladmin',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.settings',
+    'wagtail.contrib.routable_page',
+    'wagtail.contrib.sitemaps',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -40,9 +44,13 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    'wagtail.api.v2',
 
     'modelcluster',
     'taggit',
+    'captcha',
+    'widget_tweaks',
+    'wagtailcaptcha',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -159,8 +167,13 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "bgarant"
+WAGTAIL_SITE_NAME = "Бизнес гарант"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://garant-bisness.ru'
+
+
+RECAPTCHA_PUBLIC_KEY = "6LdrUqkUAAAAAHjsNpOEvX3gEZXRAJhwRWEuGPP6"
+RECAPTCHA_PRIVATE_KEY = "6LdrUqkUAAAAAPBxiYYlI6dCmTLBL0QRyPQaUve_"
+NOCAPTCHA = True

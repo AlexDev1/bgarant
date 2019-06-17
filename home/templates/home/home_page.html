@@ -1,33 +1,34 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 
 {% block content %}
-
-<section class="p-t-150 p-b-150" style="background-image:url('{% static 'img/2.jpg' %}');">
- <div class="flex-fill" >
-                <div class="container">
-                    <div class="slide-captions row">
-                        <div class="col-lg-6 mt-5 mb-5">
-                            <h6>{{ self.intro }}</h6>
-                            <h2 class="text-uppercase text-medium">{{ self.title }}</h2>
-                            <div class="lead text-white">{{ self.text_intro|safe }}</div>
-                            <a class="btn btn-red" href="https://www.youtube.com/watch?v=dA8Smj5tZOQ" data-lightbox="iframe">Смотреть видео</a>
-
-                        </div>
-                        <div class="col-lg-6 mt-5 mb-5">
-                            <a href="https://www.youtube.com/watch?v=dA8Smj5tZOQ" data-lightbox="iframe"><img src="{% static 'img/youtube-thumb.jpg' %}" alt=""></a>
-                        </div>
-
+    {% image self.image fill-1900x700 as img %}
+    <section class="p-t-150 p-b-150" style="background-image:url('{{ img.url }}');">
+        <div class="flex-fill">
+            <div class="container">
+                <div class="slide-captions row">
+                    <div class="col-lg-6 mt-5 mb-5">
+                        <h6>{{ self.intro }}</h6>
+                        <h2 class="text-uppercase text-medium">{{ self.title }}</h2>
+                        <div class="lead text-white">{{ self.text_intro|safe }}</div>
+                        <a class="btn btn-red" href="{{ self.youtube }}"
+                           data-lightbox="iframe">Смотреть видео</a>
                     </div>
+                    <div class="col-lg-6 mt-5 mb-5">
+                        <a href="{{ self.youtube }}" data-lightbox="iframe"><img
+                                src="{% static 'img/youtube-thumb.jpg' %}" alt=""></a>
+                    </div>
+
                 </div>
             </div>
-</section>
+        </div>
+    </section>
 
 
-        <!--end: Inspiro Slider -->
+    <!--end: Inspiro Slider -->
     <!-- Contact -->
     <section id="contacts" class="p-t-150 p-b-200"
              style="background-image:url({% static 'img/background-4.png' %}); background-position:71% 22%;">
@@ -45,7 +46,7 @@
                             <address>
                                 {{ settings.site_settings.ContactSettings.address }}
                             </address>
-                            <strong>Телефон:</strong>  {{ settings.site_settings.ContactSettings.phone }}
+                            <strong>Телефон:</strong> {{ settings.site_settings.ContactSettings.phone }}
                             <br>
                             <strong>Email:</strong> {{ settings.site_settings.ContactSettings.email }}
                         </div>
@@ -53,23 +54,27 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <form class="widget-contact-form" action="/contact/" role="form" method="post">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="name">Имя</label>
-                                <input type="text" aria-required="true" name="widget-contact-form-name"
+                                <input type="text" aria-required="true" name="name"
                                        class="form-control required name" placeholder="Ваше имя">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" aria-required="true" name="widget-contact-form-email"
+                                <input type="email" aria-required="true" name="email"
                                        class="form-control required email" placeholder="Ваша почта">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Сообщение</label>
-                            <textarea type="text" name="widget-contact-form-message" rows="8"
+                            <textarea type="text" name="message" rows="8"
                                       class="form-control required" placeholder="Ваше сообщение"></textarea>
                         </div>
+                        <!-- Google recaptcha required site-key (change with yours => https://www.google.com/recaptcha/admin#list) -->
+                        <div class="g-recaptcha" data-sitekey="6LdrUqkUAAAAAHjsNpOEvX3gEZXRAJhwRWEuGPP6"></div>
+                        <!--/ Google recaptcha required site-key -->
                         <div class="form-group">
                             <button class="btn btn-light" type="submit" id="form-submit"><i
                                     class="fa fa-paper-plane"></i>&nbsp;Отправить

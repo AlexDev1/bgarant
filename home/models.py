@@ -3,11 +3,18 @@ from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.core.fields import RichTextField
 
 from wagtail.core.models import Page
+from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class HomePage(Page):
     max_count = 1
-
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True, verbose_name="Картинка",
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+',
+        help_text='Только в ландшафтном режиме; горизонтальная ширина от 1000 до 3000 пикселей.')
     intro = models.CharField("Подзаголовок",
                              blank=True,
                              default="Заголовок",
@@ -28,11 +35,17 @@ class HomePage(Page):
                                default="",
                                max_length=50,
                                )
+    youtube = models.URLField("Ссылка на Youtube-video")
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname="full"),
+        ImageChooserPanel('image'),
         FieldPanel('text_intro'),
-        # StreamFieldPanel("content"),
+        FieldPanel("youtube"),
+    ]
+
+    subpage_types = [
+        'contact.ContactPage',
     ]
 
     class Meta:

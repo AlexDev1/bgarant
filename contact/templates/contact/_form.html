@@ -1,0 +1,65 @@
+{% load wagtailcore_tags widget_tweaks %}
+<div class="cf_response"></div>
+<form action="/contacts/" method="post" class="contact_form row mt-40"
+      enctype="multipart/form-data">
+    {% csrf_token %}
+     <div class="cf_response"></div>
+{#    {% for field in form.visible_fields %}#}
+{#        <div class="fcol-sm-6 kl-fancy-form">#}
+{#            {% render_field field %}#}
+{#         {{ field.label_tag }}#}
+{#        </div>#}
+{#    {% endfor %}#}
+    <div class="col-sm-6 kl-fancy-form">
+        <input type="text" name="name" id="cf_name-pop-up" class="form-control"
+               placeholder="Введите ваше имя" value="" tabindex="1" maxlength="35"
+               required>
+        <label class="control-label">Имя</label>
+    </div>
+
+    <div class="col-sm-6 kl-fancy-form">
+        <input type="text" name="lastname" id="cf_lastname-pop-up" class="form-control"
+               placeholder="Введите вашу фамилию" value="" tabindex="1"
+               maxlength="35" required>
+        <label class="control-label">
+            Фамилия
+        </label>
+    </div>
+
+    <div class="col-sm-12 kl-fancy-form">
+        <input type="text" name="email" id="cf_email-pop-up" class="form-control h5-email"
+               placeholder="Оставить свой почтовый адрес" value="" tabindex="1"
+               maxlength="35" required>
+        <label class="control-label">
+            EMAIL
+        </label>
+    </div>
+
+    <div class="col-sm-12 kl-fancy-form">
+        <input type="text" name="subject" id="cf_subject-pop-up" class="form-control"
+               placeholder="Тема сообщения" value="" tabindex="1" maxlength="35"
+               required>
+        <label class="control-label">
+            Тема
+        </label>
+    </div>
+
+    <div class="col-sm-12 kl-fancy-form">
+                <textarea name="message" id="cf_message-pop-up" class="form-control" cols="30" rows="5"
+                          placeholder="Ваше сообщение" tabindex="4" required></textarea>
+        <label class="control-label">
+            Комментарий
+        </label>
+    </div>
+
+    <!-- Google recaptcha required site-key (change with yours => https://www.google.com/recaptcha/admin#list) -->
+    <div class="g-recaptcha" data-sitekey="6Le1OakUAAAAAOPTKLgnEvXKtzLxK90jglBJdCxv"></div>
+    <!--/ Google recaptcha required site-key -->
+
+    <div class="col-sm-12">
+        <!-- Contact form send button -->
+        <button class="btn btn-fullcolor" type="submit">
+            Отправить
+        </button>
+    </div>
+</form>
