@@ -18,8 +18,8 @@ class ContactSettings(BaseSetting):
     )
     name = models.CharField(verbose_name="Название", max_length=15)
     address = models.CharField(verbose_name="Адрес", max_length=200)
-    phone = models.CharField(verbose_name="Телефон", max_length=15)
-    email = models.CharField(verbose_name="Email", max_length=15)
+    phone = models.CharField(verbose_name="Телефон", max_length=25)
+    email = models.CharField(verbose_name="Email", max_length=25)
     # header_text = models.CharField(verbose_name="Текст на верху страницы", max_length=75)
     # promo_text = models.CharField(verbose_name="Промо-текст с адресом", max_length=100)
     #
