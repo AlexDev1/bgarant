@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'search',
     'site_settings',
     'contact',
+    'streams',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.modeladmin',

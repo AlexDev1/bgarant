@@ -147,12 +147,12 @@ var INSPIRO = {},
                     var $elem = $(this),
                         elemHeight = $window.height();
 
-                        
+
                         $(window).breakpoints("greaterEqualTo", "lg", function () {
                             $elem.css('height', elemHeight);
                         });
 
-                        
+
                         $(window).breakpoints("lessThan", "lg", function () {
                             if($(".text-middle").length> 0) {
                             var fullScreenContentHeight = $elem.find(".text-middle").height() + 100;
@@ -161,7 +161,7 @@ var INSPIRO = {},
                             $elem.css({
                                 'height': fullScreenContentHeight,
                                 'padding': '60px 15px 120px'
-                            }); 
+                            });
                         }else {
                             $elem.css('height', elemHeight);
                         }
@@ -1129,7 +1129,7 @@ var INSPIRO = {},
                     INSPIRO.elements.notification("Warning: jQuery countTo plugin is missing in plugins.js file.", "warning")
                     return true;
                 }
-                //Initializing countTo plugin 
+                //Initializing countTo plugin
                 $counter.each(function () {
                     var $elem = $(this);
                     new Waypoint({
@@ -1354,7 +1354,7 @@ var INSPIRO = {},
                     } else {
                         var gridMargin2 = elem.options.gridMargin;
                     }
-    
+
                     elem.css("margin", "0 -" + gridMargin2 + "px -" + elem.options.gridMargin + "px 0");
                     elem.find('.' + elem.options.itemSelector).css("padding", "0 " + elem.options.gridMargin + "px " + elem.options.gridMargin + "px 0");
 
@@ -1374,7 +1374,7 @@ var INSPIRO = {},
                             visibleStyle: {
                                 opacity: 1,
                                 transform: "translate3d(0px, 0px, 0px)",
-                            }, */ 
+                            }, */
                             masonry: {
                                 // use outer width of grid-sizer for columnWidth
                                 columnWidth: elem.find('.' + elem.options.itemSelector + ':not(.large-width)')[0],
@@ -1405,17 +1405,17 @@ var INSPIRO = {},
                                 $filterItem = elemFilter.find('a'),
                                 elemFilterLayout = elemFilter.attr('data-layout'),
                                 $filterItemActiveClass = "active";
-    
+
                             $filterItem.on('click', function () {
-    
+
                                 elemFilter.find('li').removeClass($filterItemActiveClass);
                                 $(this).parent('li').addClass($filterItemActiveClass);
-    
+
                                 var filterValue = $(this).attr('data-category');
                                     $(elemFilterLayout).isotope({
                                         filter: filterValue,
                                     });
-    
+
                                 if ($(".grid-active-title").length > 0) {
                                     $(".grid-active-title").empty().append($(this).text())
                                 }
@@ -1426,7 +1426,7 @@ var INSPIRO = {},
 
 
                 });
-                
+
             }
         },
         gridLayoutRefresh: function (elem) {
@@ -1944,12 +1944,12 @@ var INSPIRO = {},
                 timer: $timer,
                 newest_on_top: $newest_on_top,
                 showProgressbar: $showProgressbar,
-                
+
                 offset: {
                     x: $offsetX,
                     y: $offsetY
                 },
-               
+
                 z_index: $z_index,
                 animate: {
                     enter: 'animated ' + $animateEnter,
@@ -2255,7 +2255,7 @@ var INSPIRO = {},
 
                 $contactForm.each(function () {
                     var elem = $(this),
-                        elemSuccessMessage = elem.attr('data-success-message') || "We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.";
+                        elemSuccessMessage = elem.attr('data-success-message') || "Ваша заявка <strong>успешно</strong> отправлена!";
 
                     elem.validate({
                         submitHandler: function (form) {

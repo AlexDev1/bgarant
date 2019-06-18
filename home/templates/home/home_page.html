@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static wagtailimages_tags %}
+{% load static wagtailimages_tags wagtailcore_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -12,7 +12,7 @@
                 <div class="slide-captions row">
                     <div class="col-lg-6 mt-5 mb-5">
                         <h6>{{ self.intro }}</h6>
-                        <h2 class="text-uppercase text-medium">{{ self.title }}</h2>
+                        <h2 class="text-uppercase text-white">{{ self.title }}</h2>
                         <div class="lead text-white">{{ self.text_intro|safe }}</div>
                         <a class="btn btn-red" href="{{ self.youtube }}"
                            data-lightbox="iframe">Смотреть видео</a>
@@ -26,10 +26,13 @@
             </div>
         </div>
     </section>
-
-
-    <!--end: Inspiro Slider -->
-    <!-- Contact -->
+    <section id="info" class="p-t-50 p-b-50">
+        <div class="flex-fill">
+            <div class="container">
+                {{ self.body }}
+            </div>
+        </div>
+    </section>
     <section id="contacts" class="p-t-150 p-b-200"
              style="background-image:url({% static 'img/background-4.png' %}); background-position:71% 22%;">
         <div class="container">
@@ -39,16 +42,22 @@
                         <div class="col-lg-12">
                             <div class="heading-text heading-section">
                                 <h2>{{ self.title_contacts }}</h2>
-                                <p class="lead">{{ self.text_contacts }}</p>
+                                <p class="lead">{{ self.text_contacts|safe }}</p>
                             </div>
                         </div>
                         <div class="col-lg-6 m-b-30">
+                            {% if settings.site_settings.ContactSettings.address %}
                             <address>
                                 {{ settings.site_settings.ContactSettings.address }}
                             </address>
+                        {% endif %}
+                            {% if settings.site_settings.ContactSettings.phone %}
                             <strong>Телефон:</strong> {{ settings.site_settings.ContactSettings.phone }}
+                            {% endif %}
+                            {% if settings.site_settings.ContactSettings.email %}
                             <br>
                             <strong>Email:</strong> {{ settings.site_settings.ContactSettings.email }}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -67,14 +76,26 @@
                                        class="form-control required email" placeholder="Ваша почта">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="city">Город</label>
+                                <input type="text" aria-required="true" name="city"
+                                       class="form-control required name" placeholder="Ваш город">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Телефон</label>
+                                <input type="text" aria-required="true" name="phone"
+                                       class="form-control required " placeholder="Ваш телефон">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="message">Сообщение</label>
                             <textarea type="text" name="message" rows="8"
                                       class="form-control required" placeholder="Ваше сообщение"></textarea>
                         </div>
-                        <!-- Google recaptcha required site-key (change with yours => https://www.google.com/recaptcha/admin#list) -->
+                        <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LdrUqkUAAAAAHjsNpOEvX3gEZXRAJhwRWEuGPP6"></div>
-                        <!--/ Google recaptcha required site-key -->
+                        </div>
                         <div class="form-group">
                             <button class="btn btn-light" type="submit" id="form-submit"><i
                                     class="fa fa-paper-plane"></i>&nbsp;Отправить
