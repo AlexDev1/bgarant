@@ -172,7 +172,7 @@ MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = "Бизнес гарант"
 WAGTAILADMIN_NOTIFICATION_USE_HTML = True
-WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'alexbog80@gmail.com'
+WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'serega89630@yandex.ru'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 AUTH_USER_EMAIL_UNIQUE = True
