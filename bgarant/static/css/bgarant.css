@@ -1,4 +1,4 @@
-p, ol, li, ul, div {
+section p, section ol, section li, section ul, section div {
     font-size: 1.1em;
     line-height: 1.6;
     color: #565656;
