@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.db import models
 from django.forms import widgets
 from django.http import JsonResponse
@@ -9,6 +11,7 @@ from wagtail.admin.edit_handlers import (
     InlinePanel,
     MultiFieldPanel
 )
+from wagtail.admin.utils import send_mail
 from wagtail.contrib.forms.models import AbstractFormField, AbstractEmailForm
 from wagtail.core.fields import RichTextField
 from wagtailcaptcha.models import WagtailCaptchaEmailForm
@@ -73,11 +76,21 @@ class ContactPage(WagtailCaptchaEmailForm):
             context
         )
 
-    # def process_form_submission(self, form):
-    #     self.get_submission_class().objects.create(
-    #         form_data=json.dumps(form.cleaned_data, cls=DjangoJSONEncoder),
-    #         page=self
-    #     )
+    def send_mail(self, form):
+        addresses = [x.strip() for x in self.to_address.split(',')]
+        content = []
+        for field in form:
+            value = field.value()
+            if isinstance(value, list):
+                value = ', '.join(value)
+            content.append('{}: {}'.format(field.label, value))
+        submitted_date_str = date.today().strftime('%x')
+        content.append('{}: {}'.format(
+            'Отправлено', submitted_date_str))
+
+        content = '\n'.join(content)
+        subject = self.subject + " - " + submitted_date_str
+        send_mail(subject, content, addresses, self.from_address)
 
     def get_form(self, *args, **kwargs):
         form = super().get_form(*args, **kwargs)
