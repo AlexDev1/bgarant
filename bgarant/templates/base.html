@@ -19,7 +19,7 @@
     <link href="{% static "css/plugins.css" %}" rel="stylesheet">
     <link href="{% static "css/style.css" %}" rel="stylesheet">
     <link href="{% static "css/responsive.css" %}" rel="stylesheet">
-{#    <link href="{% static "css/lawyer-style.css" %}" rel="stylesheet">#}
+    <link href="{% static "js/morrisjs/morris.css" %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bgarant.css' %}">
 
     {% block extra_css %}
@@ -49,18 +49,109 @@
                 </div>
             </div>
         </div>
-{#        <div class="copyright-content">#}
-{#            <div class="container">#}
-{#                <div class="copyright-text text-center">&copy; {% now 'Y' %} - {{ settings.site_settings.ContactSettings.name }}</div>#}
-{#            </div>#}
-{#        </div>#}
     </footer>
     <!-- end: Footer -->
-
 </div>
 <a id="scrollTop"><i class="icon-chevron-up1"></i><i class="icon-chevron-up1"></i></a>
 <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/raphael.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/morrisjs/morris.min.js' %}"></script>
+<script>
+        jQuery(document).ready(function () {
+            new Morris.Bar({
+                element: "morris_2",
+                data: [{
+                    y: "1 месяц",
+                    a: 50,
+
+                }, {
+                    y: "3-й месяц",
+                    a: 150,
+
+                }, {
+                    y: "Полгода",
+                    a: 250,
+
+                }, {
+                    y: "9 месяцев",
+                    a: 270,
+
+                }, {
+                    y: "1 год",
+                    a: 345,
+
+                }, {
+                    y: "1 год 3 месяца",
+                    a: 470,
+
+                }, {
+                    y: "1 год 6 месяцев ",
+                    a: 500,
+
+                }],
+                xkey: "y",
+                ykeys: ["a","b"],
+                labels: ["1 точка", "-"],
+                barGap: 0,
+                barSizeRatio: 1,
+                smooth: 1,
+                gridLineColor: "#e3e3e3",
+                numLines: 6,
+                fillOpacity: 1,
+                barColors: ["#4a81d4"]
+            });
+            new Morris.Bar({
+                element: "morris_3",
+                data: [{
+                    y: "2012",
+                    a: 75,
+                    b: 65,
+                    c: 110
+                }, {
+                    y: "2013",
+                    a: 50,
+                    b: 40,
+                    c: 85
+                }, {
+                    y: "2014",
+                    a: 75,
+                    b: 65,
+                    c: 52
+                }, {
+                    y: "2015",
+                    a: 50,
+                    b: 40,
+                    c: 77
+                }, {
+                    y: "2016",
+                    a: 75,
+                    b: 65,
+                    c: 90
+                }, {
+                    y: "2017",
+                    a: 100,
+                    b: 90,
+                    c: 130
+                }, {
+                    y: "2018",
+                    a: 80,
+                    b: 65,
+                    c: 95
+                }],
+                xkey: "y",
+                ykeys: ["a", "b", "c"],
+                labels: ["Apple", "Samsung", "Fitbit"],
+                barGap: 0,
+                barSizeRatio: 1,
+                smooth: 1,
+                gridLineColor: "#e3e3e3",
+                numLines: 6,
+                fillOpacity: 1,
+                barColors: ["#4a81d4", "#4fc6e1", "#e3eaef"]
+            });
+        });
+    </script>
 <script type="text/javascript" src="{% static 'js/functions.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bgarant.js' %}"></script>
 <script src='//www.google.com/recaptcha/api.js'></script>
