@@ -1,6 +1,4 @@
-{% load static wagtailuserbar wagtailimages_tags %}
-
-<!DOCTYPE html>
+<!DOCTYPE html>{% load static wagtailuserbar wagtailimages_tags %}{% comment %}Theme POLO {% endcomment %}
 <html class="no-js" lang="ru">
 <head>
     <meta charset="utf-8"/>
@@ -16,12 +14,12 @@
     </title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     {# Global stylesheets #}
     <link href="{% static "css/plugins.css" %}" rel="stylesheet">
     <link href="{% static "css/style.css" %}" rel="stylesheet">
     <link href="{% static "css/responsive.css" %}" rel="stylesheet">
-    <link href="{% static "css/lawyer-style.css" %}" rel="stylesheet">
+{#    <link href="{% static "css/lawyer-style.css" %}" rel="stylesheet">#}
     <link rel="stylesheet" type="text/css" href="{% static 'css/bgarant.css' %}">
 
     {% block extra_css %}

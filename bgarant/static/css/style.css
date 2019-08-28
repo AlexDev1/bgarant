@@ -5,6 +5,7 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600";
 @import "https://fonts.googleapis.com/css?family=Poppins:100,200,400,500,600,700,800";
 @import "https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800";
+@import "https://fonts.googleapis.com/css?family=Montserrat&display=swap";
 /* ----------------------------------------------------------------------
 	Base Colors
 -------------------------------------------------------------------------*/
@@ -117,7 +118,7 @@ section {
     text-align: center;
     padding: 0; }
     #page-title .page-title > h1 {
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       font-size: 44px;
       line-height: 56px;
       font-weight: 400;
@@ -1129,7 +1130,7 @@ Main Menu
         margin-left: 6px; }
         #mainMenu nav > ul > li > a {
           position: relative;
-          font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+          font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
           padding: 10px 12px;
           text-transform: uppercase;
           font-size: 12px;
@@ -1179,7 +1180,7 @@ Main Menu
             font-weight: 500;
             font-style: normal;
             color: #444;
-            font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+            font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
             padding: 12px 20px 12px 18px;
             display: block;
             transition: .3s ease; }
@@ -1221,7 +1222,7 @@ Main Menu
           #mainMenu nav > ul > li.mega-menu-item .mega-menu-content {
             padding: 20px; }
             #mainMenu nav > ul > li.mega-menu-item .mega-menu-content .mega-menu-title {
-              font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+              font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
               font-size: 13px;
               line-height: 14px;
               font-weight: 600;
@@ -1615,7 +1616,7 @@ Main Menu
         padding-right: 6px; }
       .header-extras > ul > li > a:not(.btn),
       .header-extras > ul > li .topbar-dropdown > .title {
-        font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+        font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
         font-size: 12px;
         position: relative;
         display: block;
@@ -1897,7 +1898,7 @@ Page Menu
         display: inline-block;
         float: none;
         padding: 0px 2px;
-        font-family: "Poppins", "Helvetica", "Arial", sans-serif; }
+        font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
         .page-menu nav > ul > li:last-child {
           margin-right: 0; }
         .page-menu nav > ul > li > a {
@@ -1931,7 +1932,7 @@ Page Menu
             color: #565656;
             z-index: 2; }
         .page-menu nav > ul > li .dropdown-menu {
-          font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+          font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
           padding: 14px 20px;
           width: auto;
           top: 50px;
@@ -2946,7 +2947,7 @@ HEADER: Responsive
         left: 300px;
         right: 0; } }
 .sidebar-menu {
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif; }
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
   .sidebar-menu label {
     display: block;
     text-transform: uppercase;
@@ -3011,7 +3012,7 @@ HEADER: Responsive
       font-size: 34px;
       padding: 10px 0;
       border-color: #cecece;
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       font-weight: 700;
       margin-bottom: 20px;
       background-color: transparent; }
@@ -3169,7 +3170,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   color: #1f1f1f;
   margin: 0;
   letter-spacing: 0.5px; }
@@ -4263,7 +4264,7 @@ h6.font-parisienne {
     .grid-item.no-overlay .portfolio-description span,
     .grid-item.no-overlay .grid-description span {
       color: #565656;
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
@@ -4275,7 +4276,7 @@ h6.font-parisienne {
     .portfolio-item.no-overlay .grid-description p,
     .grid-item.no-overlay .portfolio-description p,
     .grid-item.no-overlay .grid-description p {
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       color: #565656;
       font-weight: 500;
       font-size: 14px;
@@ -6463,22 +6464,22 @@ body.breakpoint-xs .text-xl span {
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif; }
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
   #footer p {
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif; }
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
   #footer a:not(.btn) {
     font-weight: 400; }
   #footer .footer-content {
     padding: 60px 0 40px 0; }
   #footer .widget .widget-title,
   #footer .widget h4 {
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 600; }
     #footer .widget .widget-title ul li a,
     #footer .widget h4 ul li a {
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       font-size: 15px;
       line-height: 32px;
       color: #999; }
@@ -6506,7 +6507,7 @@ body.breakpoint-xs .text-xl span {
             color: $color-white;
         } */ }
     #footer.inverted p {
-      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       color: #999; }
     #footer.inverted a:not(.btn) {
       color: #999;
@@ -8076,7 +8077,7 @@ transform: translateZ(0px);
   font-size: 12px !important;
   padding: 4px 14px;
   height: 34px;
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   background-color: #ffffff !important;
   border-color: #ebebeb !important;
   color: #4c5667 !important;
@@ -9493,7 +9494,7 @@ a:not([href]):not([tabindex]):not(.btn) {
 
 a.btn:not([href]):not([tabindex]),
 .btn {
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   border-radius: 5px 5px 5px 5px;
   font-size: 12px;
   font-weight: 600;
@@ -10055,7 +10056,7 @@ a.btn:not([href]):not([tabindex]),
   border-radius: 5px;
   transition: all 0.2s ease; }
   .card .card-title {
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif; }
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
   .card:not(.card-static):hover {
     box-shadow: 0 6px 38px rgba(0, 0, 0, 0.05); }
 
@@ -10642,14 +10643,14 @@ i:not(.fa):not(.fab):not(.far):not(.fas) {
   .icon-box h3,
   .icon-box h5 {
     margin: 0 12px 10px 83px;
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
     letter-spacing: 0px;
     font-size: 16px;
     line-height: 25px;
     font-weight: 700; }
   .icon-box p {
     margin: 0 0 20px 83px;
-    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400; }
@@ -12428,7 +12429,7 @@ button::-moz-focus-inner {
   color: #a3a3a3;
   font-size: 37px;
   font-weight: 300;
-  font-family: Poppins;
+  font-family: Montserrat;
   top: 5px;
   right: 5px; }
 
@@ -13115,7 +13116,7 @@ img.mfp-img {
   font-size: 28px;
   line-height: 28px;
   font-weight: 400;
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   margin-bottom: 20px; }
 
 .modal p {
@@ -13492,7 +13493,7 @@ body.breakpoint-xl .pricing-table .col-lg-2 .plan-list ul li, body.breakpoint-lg
   .testimonial.testimonial-left .testimonial-item > span {
     margin-left: 220px; }
 .testimonial.testimonial-blockquote .testimonial-item > p {
-  font-family: "Poppins";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 24px;
   line-height: 32px;

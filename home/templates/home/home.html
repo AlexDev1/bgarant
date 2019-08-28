@@ -1,0 +1,361 @@
+{% extends "base.html" %}
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+{% block body_class %}{% endblock %}
+
+
+{% block content %}
+    {#    {% image self.image fill-1920x1280 as img %}#}
+    <section id="page-title" class="text-light" data-vide-bg="/static/video/Head-or-Tails"
+             data-vide-options="bgColor: 'dark', playbackRate: 0.7, position: 0% 50%">
+        <div class="container">
+
+            <div class="page-title">
+                <div class="text-middle text-center">
+                    <h1 class="text-uppercase text-light" data-animate="fadeInUp">{{ self.title }}</h1>
+                    <p class="lead text-light " data-animate="fadeInUp"
+                       data-animate-delay="600">{{ self.text_intro|safe }}</p>
+                    <span data-animate="fadeInUp" data-animate-delay="900">
+			<div data-caption-animation="zoom-out">
+                             <a href="{{ self.youtube }}" data-lightbox="iframe"
+                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>
+                        </div>
+			</span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION IMAGE FULLSCREEN -->
+    {#    <section id="home" class="fullscreen" data-parallax-image="{{ img.url }}">#}
+    {#        <div class="container container-fullscreen">#}
+    {#            <div class="text-middle text-center">#}
+    {#                <h1 class="text-uppercase text-lg text-light" data-animate="fadeInUp">{{ self.title }}</h1>#}
+    {#                <p class="lead text-light " data-animate="fadeInUp"#}
+    {#                   data-animate-delay="600">{{ self.text_intro|safe }}</p>#}
+    {#                <span data-animate="fadeInUp" data-animate-delay="900">#}
+    {#			<div data-caption-animation="zoom-out">#}
+    {#                             <a href="{{ self.youtube }}" data-lightbox="iframe"#}
+    {#                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>#}
+    {#                        </div>#}
+    {#			</span>#}
+    {##}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+
+    <!-- About us -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <h2>Здравствуйте дорогие друзья!</h2>
+                    <h3>Я взял франшизу СушиВок и потерял 2 500 000 рублей.</h3>
+                    <p class="lead">Но я оценил ситуацию и начал заново.
+                        <br>
+                        Я собрал команду профессионалов, которая уже на второй месяц вывело моё предприятие в плюс.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="background-grey p-t-100 p-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <h3>Теперь я могу помочь вам заработать деньги по двум направлениям:</h3>
+                    <p class="lead">
+                        1 Суши и роллы ( 1 точка реализации) : вложение 2500000 рублей, прибыль со второго месяца от
+                        100000 до 200000 рублей. Окупаемость 1,5 года.
+                        <br>
+                        2 Пекарня и столовая ( 4 точки реализации) : вложение 4500000 рублей, прибыль с первого месяца
+                        от 400000 до 500000 рублей. Окупаемость 1 год.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call to action -->
+    <section class="call-to-action background-image"
+             style="background-image:url({% static 'img/paralax-call-to-action.jpg' %}">
+        <div class="container">
+            <div class="col-lg-12 text-right">
+                <h2 class="text-light">Вы становитесь <span>сами себе</span> хозяином</h2>
+                <p class="text-light lead">Над вами нет директора, директором становитесь вы.</p>
+                <h4 class="text-light text-lg">Инвестируйте в себя!</h4>
+            </div>
+            <div class="col-lg-12 text-right"><a href="#contacts" class="btn btn-light btn-outline">Позвоните нам
+                сейчас!</a></div>
+        </div>
+    </section>
+    <!-- end: Call to action -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 heading-text heading-line p-t-10">
+                    <h2>Готовый бизнес</h2>
+                    <h3>Почему нельзя брать готовый бизнес:</h3>
+{#                    <div class="row">#}
+{#                        <div class="col-lg-4">#}
+{#                            <div class="icon-box effect medium border square">#}
+{#                                <div class="icon"><a href="#"><i class="fas fa-info-circle"></i></a></div>#}
+{#                                <h3>Во первых</h3>#}
+{#                                <p>Хороший бизнес продавать ни кто не будет, так как он приносит#}
+{#                            основной доход владельцу.</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-4">#}
+{#                            <div class="icon-box effect medium border square">#}
+{#                                <div class="icon"><a href="#"><i class="fas fa-comment-dollar"></i></a></div>#}
+{#                                <h3>Второе</h3>#}
+{#                                <p>Бизнес продают, потому что он не приносит доход и денег на развитие нет. И в#}
+{#                            ближайшее время его закроют.</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-4">#}
+{#                            <div class="icon-box effect medium border square">#}
+{#                                <div class="icon"><a href="#"><i class="fas fa-plus"></i></a></div>#}
+{#                                <h3>Плюс</h3>#}
+{#                                <p>Еще появились перепродавцы бизнеса.#}
+{#                                    <br><strong>Не ловитесь на это!</strong></p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="row col-no-margin equalize" data-equalize-item=".text-box">
+                <!--Box 1-->
+                <div class="col-lg-4" style="background-color: #39B24B;">
+                    <div class="text-box">
+                        <a href="#"> <i class="fas fa-info-circle"></i></i>
+                            <h3>Во первых</h3>
+                            <p>Хороший бизнес продавать ни кто не будет, так как он приносит
+                            основной доход владельцу.</p>
+                        </a>
+                    </div>
+                </div>
+                <!--End: Box 1-->
+                <!--Box 2-->
+                <div class="col-lg-4" style="background-color: #56B847;">
+                    <div class="text-box">
+                        <a href="#"> <i class="fas fa-comment-dollar"></i></i>
+                            <h3>Второе </h3>
+                            <p>Бизнес продают, потому что он не приносит доход и денег на развитие нет. И в
+                            ближайшее время его закроют.</p>
+                        </a>
+                    </div>
+                </div>
+                <!--End: Box 2-->
+                <!--Box 3-->
+                <div class="col-lg-4" style="background-color: #8BC73F;">
+                    <div class="text-box">
+                        <a href="#"> <i class="fas fa-plus"></i></i>
+                            <h3>Плюс</h3>
+                            <p>Еще появились перепродавцы бизнеса.
+                                    <br><strong>Не ловитесь на это!</strong></p>
+                        </a>
+                    </div>
+                </div>
+                <!--End: Box 3-->
+            </div>
+                    <p class="text-xl text-center ">Лучше открывать бизнес с нами, с профессионалами в этой сфере.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="background-grey p-t-100 p-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12  p-t-10">
+                    <h2 class="text-center">Реальные отзывы о нас</h2>
+                    <!-- Testimonials -->
+                    <div class="carousel arrows-visibile testimonial testimonial-single testimonial-blockquote"
+                         data-items="1" data-arrows="false" data-autoplay="true" data-autoplay-timeout="3000"
+                         data-animate-in="fadeIn" data-animate-out="fadeOut" data-loop="true">
+                        <div class="testimonial-item">
+                            <p>Круто помогли развернуть и сделать старт для моего бизнеса!</p>
+                            <span>Иван Петров</span>
+                            <span>Сушимаркет - Березовск</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <p>Уже думала что все попала в яму, но эти ребята мне очень сильно помогли!</p>
+                            <span>Екатерина Иванова</span>
+                            <span>СушиВорк - Челябинск</span>
+                        </div>
+                    </div>
+                    <!-- end: Testimonials -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Work -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+
+                    <div class="heading-text heading-line">
+                        <h2>Про франшизу</h2>
+                        <p>Многие предприятия кто продает, франшизу обещают, что вы уже через 5 месяцев окупите вашу
+                            точку, и будете зарабатывать 350000 рублей. Это миф. Объясню почему. Вы предприниматель
+                            другой сферы. Взяли франшизу и вас отправляют учиться в другой город неделю. Отучившись
+                            неделю, вы приезжаете обратно в свой город.
+                            И понимаете, что зря его потратили, так как вас ни чему не научили.
+                            Но вам дали пособие с телефоном. Вы ищите помещение по пособию. Понятно, что вы найдете не
+                            рентабельное помещение.
+                            Потом вы ищите поваров, тоже полных швах. И на самое открытие
+                            приезжает повар с управляющим и учит тех поваров, которых вы искали. Учат всего неделю.
+                            Первый месяц вы работаете в 0.
+                            Второй месяц вы уже в минусе. А на третий вы закрываетесь.
+                            И так вы потеряете 2500000 рублей.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2  offset-3 p-t-60">
+                    <a href="#"
+                       class="btn btn-light btn-shadow btn-rounded btn-reveal btn-reveal-left"><span> Our Work </span><i
+                            class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- end: Our Work -->
+
+    <!-- Services -->
+    <section class="p-t-150 p-b-100">
+        <div class="container">
+            <div class="col-lg-8 m-b-100 center">
+                <div class="heading-text heading-section text-center">
+                    <h2>Как работает наша команда</h2>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-3">
+                    <div class="icon-box text-center effect border color">
+                        <div class="icon">
+                            <a href="#"><i class="fas fa-city"></i></a>
+                        </div>
+                        <h5>Ищем сами помещение для точки продаж</h5>
+                        <p class="lead">Подбираем помещение для оптимально большого трафика поситителей</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="icon-box text-center effect border color">
+                        <div class="icon">
+                            <a href="#"><i class="fas fa-cogs"></i></a>
+                        </div>
+                        <h5>Делаем ремонт и покупаем оборудование</h5>
+                        <p class="lead">Подберем и настроим все необходимое оборудование для торговли</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="icon-box text-center effect border color">
+                        <div class="icon">
+                            <a href="#"><i class="fas fa-chalkboard-teacher"></i></a>
+                        </div>
+                        <h5>Ищем и обучаем сотрудников</h5>
+                        <p class="lead">Один из ключевых моментов - это ценные сотрудники в вашей фирме</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="icon-box text-center effect border color">
+                        <div class="icon">
+                            <a href="#"><i class="fa fa-umbrella"></i></a>
+                        </div>
+                        <h5>PR-компания и размещение рекламы</h5>
+                        <p class="lead">Занимаемся PR-компанией и приглашаем артистов на открытие</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Services -->
+
+
+    <section id="contacts" class="p-t-150 p-b-200"
+             style="background-image:url({% static 'img/background-4.png' %}); background-position:71% 22%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="heading-text heading-section">
+                                <h2>{{ self.title_contacts }}</h2>
+                                <p class="lead">{{ self.text_contacts|safe }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-b-30">
+                            {% if settings.site_settings.ContactSettings.address %}
+                                <address>
+                                    {{ settings.site_settings.ContactSettings.address }}
+                                </address>
+                            {% endif %}
+                            {% if settings.site_settings.ContactSettings.phone %}
+                                <strong>Телефон:</strong><br>{{ settings.site_settings.ContactSettings.phone }}
+                            {% endif %}
+                            {% if settings.site_settings.ContactSettings.email %}
+                                <br>
+                                <strong>Email:</strong> {{ settings.site_settings.ContactSettings.email }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <form class="widget-contact-form" action="/contact/" role="form" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Имя</label>
+                                <input type="text" aria-required="true" name="name"
+                                       class="form-control required name" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" aria-required="true" name="email"
+                                       class="form-control required email" placeholder="Ваша почта">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="city">Город</label>
+                                <input type="text" aria-required="true" name="city"
+                                       class="form-control required name" placeholder="Ваш город">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Телефон</label>
+                                <input type="text" aria-required="true" name="phone"
+                                       class="form-control required " placeholder="Ваш телефон">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea type="text" name="message" rows="8"
+                                      class="form-control required" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LdrUqkUAAAAAHjsNpOEvX3gEZXRAJhwRWEuGPP6"></div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-light" type="submit" id="form-submit"><i
+                                    class="fa fa-paper-plane"></i>&nbsp;Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

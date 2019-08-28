@@ -10,6 +10,7 @@ from streams.blocks import BaseStreamBlock
 
 
 class HomePage(Page):
+    template = 'home/home.html'
     max_count = 1
     image = models.ForeignKey(
         'wagtailimages.Image',
