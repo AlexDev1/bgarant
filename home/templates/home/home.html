@@ -6,26 +6,26 @@
 
 {% block content %}
     {#    {% image self.image fill-1920x1280 as img %}#}
-{#    <section id="page-title" class="text-light" data-vide-bg="/static/video/Head-or-Tails"#}
-{#             data-vide-options="bgColor: 'dark', playbackRate: 0.7, position: 0% 50%">#}
-{#        <div class="container">#}
-{##}
-{#            <div class="page-title">#}
-{#                <div class="text-middle text-center">#}
-{#                    <h1 class="text-uppercase text-light" data-animate="fadeInUp">{{ self.title }}</h1>#}
-{#                    <p class="lead text-light " data-animate="fadeInUp"#}
-{#                       data-animate-delay="600">{{ self.text_intro|safe }}</p>#}
-{#                    <span data-animate="fadeInUp" data-animate-delay="900">#}
-{#			<div data-caption-animation="zoom-out">#}
-{#                             <a href="{{ self.youtube }}" data-lightbox="iframe"#}
-{#                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>#}
-{#                        </div>#}
-{#			</span>#}
-{##}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section id="page-title" class="text-light" data-vide-bg="/static/video/Head-or-Tails"#}
+    {#             data-vide-options="bgColor: 'dark', playbackRate: 0.7, position: 0% 50%">#}
+    {#        <div class="container">#}
+    {##}
+    {#            <div class="page-title">#}
+    {#                <div class="text-middle text-center">#}
+    {#                    <h1 class="text-uppercase text-light" data-animate="fadeInUp">{{ self.title }}</h1>#}
+    {#                    <p class="lead text-light " data-animate="fadeInUp"#}
+    {#                       data-animate-delay="600">{{ self.text_intro|safe }}</p>#}
+    {#                    <span data-animate="fadeInUp" data-animate-delay="900">#}
+    {#			<div data-caption-animation="zoom-out">#}
+    {#                             <a href="{{ self.youtube }}" data-lightbox="iframe"#}
+    {#                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>#}
+    {#                        </div>#}
+    {#			</span>#}
+    {##}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
     <!-- SECTION IMAGE FULLSCREEN -->
     {#    <section id="home" class="fullscreen" data-parallax-image="{{ img.url }}">#}
     {#        <div class="container container-fullscreen">#}
@@ -59,7 +59,8 @@
                     <ol class="lead">
                         <li>Вы вкладываете всего 4500000 рублей.</li>
                         <li>Наша команда открывает сеть кафе по городу.</li>
-                        <li>В первый месяц выручка 500000 рублей, во второй 700000 рублей, на третий 1000000 рублей.</li>
+                        <li>В первый месяц выручка 500000 рублей, во второй 700000 рублей, на третий 1000000 рублей.
+                        </li>
                         <li>Окупаемость проекта всего 4 месяца.</li>
                     </ol>
                 </div>
@@ -69,10 +70,23 @@
     <section class="background-grey p-t-100 p-b-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 text-center">
-                    <h3>Теперь я могу помочь вам заработать деньги по двум направлениям:</h3>
-                    <h4>Суши и роллы ( 1 точка реализации) : вложение 2500000 рублей, прибыль со второго месяца от
-                        100000 до 200000 рублей. Окупаемость 1,5 года. </h4>
+                <div class="col-lg-12 col-md-12">
+                    <h3>Два направления для осуществления мечты</h3>
+                    <h4>2 Пекарня и столовая ( 4 точки реализации):</h4>
+                    <ul class="list-icon list-icon-info list-icon-colored lead offset-1">
+                        <li>вложение 4500000 рублей</li>
+                        <li>Прибыль с первого месяца от 500 000 до 700 000 рублей</li>
+                        <li>Окупаемость 3 месяца</li>
+                    </ul>
+                    <div id="morris_2"></div>
+                    <div class="line"></div>
+                    <h4>Суши и роллы ( 1 точка реализации):</h4>
+                    <ul class="list-icon list-icon-info list-icon-colored lead offset-1">
+                        <li>Вложение 5 000 000 рублей</li>
+                        <li>Прибыль со второго месяца от 700 000 до 800 000 рублей</li>
+                        <li>Окупаемость 1,5 года</li>
+                    </ul>
+
                     <div class="row">
                         <div class="col-lg-12">
                             <ul class="list list-legend">
@@ -80,31 +94,11 @@
                                 {#                                    <li><span style="background-color:#4fc6e1"></span>Samsung</li>#}
                                 {#                                    <li><span style="background-color:#e3eaef"></span>Fitbit</li>#}
                             </ul>
-                            <div id="morris_2"></div>
+
                         </div>
                     </div>
                     <div class="line"></div>
-                    <h4>2 Пекарня и столовая ( 4 точки реализации) : вложение 4500000 рублей, прибыль с первого месяца
-                     от 400000 до 500000 рублей. Окупаемость 1 год.</h4>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="list list-legend">
-                                <li><span style="background-color:#4a81d4"></span>1 точка реализации</li>
-                                <li><span style="background-color:#4fc6e1"></span>Samsung</li>
-                                <li><span style="background-color:#e3eaef"></span>Fitbit</li>
-                            </ul>
-                            <div id="morris_3"></div>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-{#                    <p class="lead">#}
-{#                        1 Суши и роллы ( 1 точка реализации) : вложение 2500000 рублей, прибыль со второго месяца от#}
-{#                        100000 до 200000 рублей. Окупаемость 1,5 года.#}
-{#                        <br>#}
-{#                        2 Пекарня и столовая ( 4 точки реализации) : вложение 4500000 рублей, прибыль с первого месяца#}
-{#                        от 400000 до 500000 рублей. Окупаемость 1 год.#}
-{##}
-{#                    </p>#}
+
                 </div>
             </div>
         </div>
@@ -116,45 +110,19 @@
             <div class="col-lg-12 text-right">
                 <h2 class="text-light">Вы становитесь <span>сами себе</span> хозяином</h2>
                 <p class="text-light lead">Над вами нет директора, директором становитесь вы.</p>
-                <h4 class="text-light text-lg">Инвестируйте в себя!</h4>
+                <h4 class="text-light text-lg " data-animate="rubberBand">Инвестируйте в себя!</h4>
             </div>
             <div class="col-lg-12 text-right"><a href="#contacts" class="btn btn-light btn-outline">Позвоните нам
                 сейчас!</a></div>
         </div>
     </section>
     <!-- end: Call to action -->
-    <section>
+    <section id="bissnes" name="bissnes">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 heading-text heading-line p-t-10">
                     <h2>Готовый бизнес</h2>
                     <h3>Почему нельзя брать готовый бизнес:</h3>
-                    {#                    <div class="row">#}
-                    {#                        <div class="col-lg-4">#}
-                    {#                            <div class="icon-box effect medium border square">#}
-                    {#                                <div class="icon"><a href="#"><i class="fas fa-info-circle"></i></a></div>#}
-                    {#                                <h3>Во первых</h3>#}
-                    {#                                <p>Хороший бизнес продавать ни кто не будет, так как он приносит#}
-                    {#                            основной доход владельцу.</p>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                        <div class="col-lg-4">#}
-                    {#                            <div class="icon-box effect medium border square">#}
-                    {#                                <div class="icon"><a href="#"><i class="fas fa-comment-dollar"></i></a></div>#}
-                    {#                                <h3>Второе</h3>#}
-                    {#                                <p>Бизнес продают, потому что он не приносит доход и денег на развитие нет. И в#}
-                    {#                            ближайшее время его закроют.</p>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                        <div class="col-lg-4">#}
-                    {#                            <div class="icon-box effect medium border square">#}
-                    {#                                <div class="icon"><a href="#"><i class="fas fa-plus"></i></a></div>#}
-                    {#                                <h3>Плюс</h3>#}
-                    {#                                <p>Еще появились перепродавцы бизнеса.#}
-                    {#                                    <br><strong>Не ловитесь на это!</strong></p>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
                     <div class="row col-no-margin equalize" data-equalize-item=".text-box">
                         <!--Box 1-->
                         <div class="col-lg-4" style="background-color: #39B24B;">
@@ -196,6 +164,7 @@
         </div>
 
     </section>
+
     <section class="background-grey p-t-100 p-b-100">
         <div class="container">
             <div class="row">
@@ -203,17 +172,22 @@
                     <h2 class="text-center">Реальные отзывы о нас</h2>
                     <!-- Testimonials -->
                     <div class="carousel arrows-visibile testimonial testimonial-single testimonial-blockquote"
-                         data-items="1" data-arrows="false" data-autoplay="true" data-autoplay-timeout="3000"
+                         data-items="1" data-arrows="false" data-autoplay="true" data-autoplay-timeout="1000"
                          data-animate-in="fadeIn" data-animate-out="fadeOut" data-loop="true">
                         <div class="testimonial-item">
-                            <p>Круто помогли развернуть и сделать старт для моего бизнеса!</p>
-                            <span>Иван Петров</span>
-                            <span>Сушимаркет - Березовск</span>
+                            <p>Открылись в январе 2019 года!<br>
+                                Точка роллы и сушши, выручка на второй месяц 498 000 рублей<br>
+                                Успехов!
+                            </p>
+                            <span>Татьяна - Екатеринбург</span>
+                            <span>Сушимаркет</span>
                         </div>
                         <div class="testimonial-item">
-                            <p>Уже думала что все попала в яму, но эти ребята мне очень сильно помогли!</p>
-                            <span>Екатерина Иванова</span>
-                            <span>СушиВорк - Челябинск</span>
+                            <p>Помогли открыть 4 точки пекарни! Выручка более 588 000 рублей в месяц!<br>
+                                Спасибо большое!
+                            </p>
+                            <span>Азат Йошкар-Ола</span>
+                            <span>Пекарня 4 точки</span>
                         </div>
                     </div>
                     <!-- end: Testimonials -->
@@ -222,46 +196,39 @@
         </div>
     </section>
 
-
     <!-- Our Work -->
-    <section>
+    <section id="franshiza" name="franshiza">
         <div class="container">
+            <h2>Про франшизу</h2>
             <div class="row">
-                <div class="col-lg-7">
 
-                    <div class="heading-text heading-line">
-                        <h2>Про франшизу</h2>
-                        <p>Многие предприятия кто продает, франшизу обещают, что вы уже через 5 месяцев окупите вашу
-                            точку, и будете зарабатывать 350000 рублей. Это миф. Объясню почему. Вы предприниматель
-                            другой сферы. Взяли франшизу и вас отправляют учиться в другой город неделю. Отучившись
-                            неделю, вы приезжаете обратно в свой город.
-                            И понимаете, что зря его потратили, так как вас ни чему не научили.
-                            Но вам дали пособие с телефоном. Вы ищите помещение по пособию. Понятно, что вы найдете не
-                            рентабельное помещение.
-                            Потом вы ищите поваров, тоже полных швах. И на самое открытие
-                            приезжает повар с управляющим и учит тех поваров, которых вы искали. Учат всего неделю.
-                            Первый месяц вы работаете в 0.
-                            Второй месяц вы уже в минусе. А на третий вы закрываетесь.
-                            И так вы потеряете 2500000 рублей.
-
-                        </p>
-                    </div>
+                <div class="col-lg-4 col-sm-12">
+                    <img width="100%" src="{% static 'img/men-sdfq34.jpg' %}">
                 </div>
-
-                <div class="col-lg-2  offset-3 p-t-60">
-                    <a href="#"
-                       class="btn btn-light btn-shadow btn-rounded btn-reveal btn-reveal-left"><span> Our Work </span><i
-                            class="fa fa-long-arrow-alt-right"></i></a>
+                <div class="col-lg-8 col-sm-12">
+                    <p class="lead">Многие предприятия кто продает, франшизу обещают, что вы уже через 5 месяцев окупите
+                        вашу
+                        точку, и будете зарабатывать 350 000 рублей. Это миф. <br>
+                        Объясню почему
+                        <br>Вы предприниматель другой сферы. Взяли франшизу и вас отправляют учиться в другой город
+                        неделю. Отучившись
+                        неделю, вы приезжаете обратно в свой город.
+                        <br>И понимаете, что зря его потратили, так как вас ни чему не научили.
+                        Но вам дали пособие с телефоном. Вы ищите помещение по пособию. Понятно, что вы найдете не
+                        рентабельное помещение.
+                        <br>Потом вы ищите поваров, тоже полных швах. И на самое открытие
+                        приезжает повар с управляющим и учит тех поваров, которых вы искали. Учат всего неделю.
+                        <br>Первый месяц вы работаете в 0. Второй месяц вы уже в минусе. А на третий вы закрываетесь.
+                        И так вы потеряете 2 500 000 рублей.
+                    </p>
                 </div>
             </div>
-
-
         </div>
     </section>
     <!-- end: Our Work -->
 
     <!-- Services -->
-    <section class="p-t-150 p-b-100">
+    <section id="contacts" class="p-t-150 p-b-100">
         <div class="container">
             <div class="col-lg-8 m-b-100 center">
                 <div class="heading-text heading-section text-center">
@@ -314,7 +281,7 @@
     <!-- end: Services -->
 
 
-    <section id="contacts" class="p-t-150 p-b-200"
+    <section id="contacts" class="p-t-150 p-b-100"
              style="background-image:url({% static 'img/background-4.png' %}); background-position:71% 22%;">
         <div class="container">
             <div class="row">

@@ -9,8 +9,8 @@ p {
 
 .icon-bar {
   position: fixed;
-  top: 50%;
-  left: 3%;
+  top: 40%;
+  left: 1%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -24,7 +24,9 @@ p {
   padding: 16px;
   transition: all 0.3s ease;
   color: darkred;
-  font-size: 46px;
+  width: 10%;
+  font-size: 32px;
+  line-height: 1.1;
 }
 .icon-bar a:visited {
   color: darkred;
