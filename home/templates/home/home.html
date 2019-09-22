@@ -6,26 +6,26 @@
 
 {% block content %}
     {#    {% image self.image fill-1920x1280 as img %}#}
-    <section id="page-title" class="text-light" data-vide-bg="/static/video/Head-or-Tails"
-             data-vide-options="bgColor: 'dark', playbackRate: 0.7, position: 0% 50%">
-        <div class="container">
-
-            <div class="page-title">
-                <div class="text-middle text-center">
-                    <h1 class="text-uppercase text-light" data-animate="fadeInUp">{{ self.title }}</h1>
-                    <p class="lead text-light " data-animate="fadeInUp"
-                       data-animate-delay="600">{{ self.text_intro|safe }}</p>
-                    <span data-animate="fadeInUp" data-animate-delay="900">
-			<div data-caption-animation="zoom-out">
-                             <a href="{{ self.youtube }}" data-lightbox="iframe"
-                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>
-                        </div>
-			</span>
-
-                </div>
-            </div>
-        </div>
-    </section>
+{#    <section id="page-title" class="text-light" data-vide-bg="/static/video/Head-or-Tails"#}
+{#             data-vide-options="bgColor: 'dark', playbackRate: 0.7, position: 0% 50%">#}
+{#        <div class="container">#}
+{##}
+{#            <div class="page-title">#}
+{#                <div class="text-middle text-center">#}
+{#                    <h1 class="text-uppercase text-light" data-animate="fadeInUp">{{ self.title }}</h1>#}
+{#                    <p class="lead text-light " data-animate="fadeInUp"#}
+{#                       data-animate-delay="600">{{ self.text_intro|safe }}</p>#}
+{#                    <span data-animate="fadeInUp" data-animate-delay="900">#}
+{#			<div data-caption-animation="zoom-out">#}
+{#                             <a href="{{ self.youtube }}" data-lightbox="iframe"#}
+{#                                class="btn btn-rounded"><i class="fa fa-play"></i> Смотреть видео</a>#}
+{#                        </div>#}
+{#			</span>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
     <!-- SECTION IMAGE FULLSCREEN -->
     {#    <section id="home" class="fullscreen" data-parallax-image="{{ img.url }}">#}
     {#        <div class="container container-fullscreen">#}
@@ -53,12 +53,15 @@
 
                 </div>
                 <div class="col-lg-9 col-md-12">
-                    <h2>Здравствуйте дорогие друзья!</h2>
-                    <h3>Я взял франшизу СушиВок и потерял 2 500 000 рублей.</h3>
-                    <p class="lead">Но я оценил ситуацию и начал заново.
-                        <br>
-                        Я собрал команду профессионалов, которая уже на второй месяц вывело моё предприятие в плюс.
-                    </p>
+                    <h2>Как заработать 1 000 000 рублей за 1 месяц!</h2>
+                    <h3>Пошаговая инструкция</h3>
+
+                    <ol class="lead">
+                        <li>Вы вкладываете всего 4500000 рублей.</li>
+                        <li>Наша команда открывает сеть кафе по городу.</li>
+                        <li>В первый месяц выручка 500000 рублей, во второй 700000 рублей, на третий 1000000 рублей.</li>
+                        <li>Окупаемость проекта всего 4 месяца.</li>
+                    </ol>
                 </div>
             </div>
         </div>

@@ -6,3 +6,26 @@
 p {
    color:  #212529;
 }
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 3%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 99999;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: darkred;
+  font-size: 46px;
+}
+.icon-bar a:visited {
+  color: darkred;
+}
