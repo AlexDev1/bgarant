@@ -31,3 +31,6 @@ p {
 .icon-bar a:visited {
   color: darkred;
 }
+h1 {
+  font-weight: 600;
+}
