@@ -10,7 +10,7 @@ p {
 .icon-bar {
   position: fixed;
   top: 40%;
-  left: 1%;
+  /*left: 1%;*/
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
